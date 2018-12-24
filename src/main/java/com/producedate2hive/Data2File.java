@@ -120,7 +120,7 @@ public class Data2File {
     	/**
     	 * 生成 monitor_id 对应camera_id表
     	 */
-    	Map<String,Set<String>> monitorAndCameras = new HashMap<>();
+    	Map<String,Set<String>> monitorAndCameras = new HashMap();
     	
     	int index = 0;
     	for(Row row : dataList){
@@ -128,7 +128,7 @@ public class Data2File {
     		//row.getString(1) monitor_id
     		Set<String> sets = monitorAndCameras.get(row.getString(1));
     		if(sets == null){
-    			sets = new HashSet<>();
+    			sets = new HashSet();
     			monitorAndCameras.put((String)row.getString(1), sets);
     		}
     		index++;
