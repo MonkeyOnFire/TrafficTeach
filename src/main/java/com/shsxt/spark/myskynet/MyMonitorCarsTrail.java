@@ -1,4 +1,4 @@
-package com.shsxt.spark.skynet;
+package com.shsxt.spark.myskynet;
 
 import com.shsxt.spark.util.DateUtils;
 import org.apache.commons.collections.IteratorUtils;
@@ -20,9 +20,14 @@ import java.util.List;
 
 /**
  * Created by Iskandar on 2018/12/25.
+ *
  */
 public class MyMonitorCarsTrail {
+    /**
+     * 0001卡口下的行车轨迹
+     */
     public static void main(String[] agrs) {
+
         SparkConf sparkConf = new SparkConf();
         sparkConf.setMaster("local").setAppName("MonitorCarsTrail");
         JavaSparkContext context = new JavaSparkContext(sparkConf);
@@ -42,12 +47,6 @@ public class MyMonitorCarsTrail {
 
         JavaPairRDD<String, Iterable<String>> rdd3 = rdd2.groupByKey();
         rdd3.cache();
-//        rdd3.foreach(new VoidFunction<Tuple2<String, Iterable<String>>>() {
-//            @Override
-//            public void call(Tuple2<String, Iterable<String>> stringIterableTuple2) throws Exception {
-//                System.out.println(stringIterableTuple2._1());
-//            }
-//        });
 
         JavaRDD<String> rddB = rdd1.filter(new Function<String, Boolean>() {
             private static final long serialVersionUID = 1L;
@@ -68,7 +67,6 @@ public class MyMonitorCarsTrail {
             @Override
             public Tuple2<String, String> call(String s) throws Exception {
                 String car = s.split("\t")[3];
-                //System.out.println(car);
                 return new Tuple2<>(car, car);
             }
         }).distinct();
