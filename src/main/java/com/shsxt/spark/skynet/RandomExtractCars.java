@@ -12,7 +12,7 @@ import com.shsxt.spark.domain.RandomExtractMonitorDetail;
 import com.shsxt.spark.util.DateUtils;
 import com.shsxt.spark.util.ParamUtils;
 import com.shsxt.spark.util.StringUtils;
-import it.unimi.dsi.fastutil.ints.IntList;
+//import it.unimi.dsi.fastutil.ints.IntList;
 import org.apache.commons.collections.IteratorUtils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
@@ -421,7 +421,7 @@ public class RandomExtractCars {
         }
 
         /******************************************************************/
-		Map<String, Map<String, IntList>> fastutilDateHourExtractMap = new HashMap<String, Map<String, IntList>>();
+		//Map<String, Map<String, IntList>> fastutilDateHourExtractMap = new HashMap<String, Map<String, IntList>>();
 //
 //		for (Map.Entry<String, Map<String, List<Integer>>> dateHourExtractEntry : dateHourExtractMap.entrySet()) {
 //			String date = dateHourExtractEntry.getKey();

@@ -1,6 +1,6 @@
 package com.producedate2hive;
 
-import it.unimi.dsi.fastutil.Maps;
+//import it.unimi.dsi.fastutil.Maps;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.hive.HiveContext;
