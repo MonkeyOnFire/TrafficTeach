@@ -118,7 +118,7 @@ public class MyMonitorFlowAnalyze {
             @Override
             public void call(Tuple2<String, Tuple2<String, Optional<String>>> t) throws Exception {
                 Optional o = t._2._2;
-                
+
             }
         });
 
